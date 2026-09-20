@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy — Track It</title>
+<style>
+  :root{color-scheme:light dark;--bg:#fff;--fg:#1d1d1f;--muted:#6e6e73;--rule:#e5e5ea;--link:#0066cc}
+  @media (prefers-color-scheme:dark){:root{--bg:#000;--fg:#f5f5f7;--muted:#a1a1a6;--rule:#3a3a3c;--link:#2997ff}}
+  body{margin:0;padding:2.5rem 1.25rem 4rem;background:var(--bg);color:var(--fg);font:17px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif}
+  main{max-width:42rem;margin:0 auto}
+  h1{font-size:2rem;line-height:1.15;margin:0 0 .25rem}
+  h2{font-size:1.25rem;margin:2rem 0 .5rem}
+  p,li{margin:.6rem 0}
+  .meta{color:var(--muted);margin-bottom:1.5rem}
+  a{color:var(--link)}
+  ul{padding-left:1.25rem}
+  code{font:.92em ui-monospace,SFMono-Regular,Menlo,monospace}
+  footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.92rem}
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy — Track It</h1>
+  <p class="meta">Last updated 20 September 2026.</p>
+
+  <p>Track It is a personal maintenance log for the things you own: boats, vehicles, house systems, appliances, electronics.</p>
+
+  <p><strong>It collects nothing, and it cannot: the app makes no network requests at all.</strong> There is no account, no analytics, no advertising identifier, no crash-reporting service and no third-party code that talks to a server. <code>URLSession</code> does not appear anywhere in the source. The only thing the app does with the outside world is hand a file to the iOS share sheet when you ask it to.</p>
+
+  <p>That claim is checkable rather than asserted: the app ships an Apple privacy manifest (<code>PrivacyInfo.xcprivacy</code>) declaring no data collection and no tracking.</p>
+
+  <p>This text is also <strong>inside the app</strong>, under <em>Settings → About → Privacy Policy</em>, so it is readable without a network and without this page being reachable.</p>
+
+  <h2>What stays on your device</h2>
+  <p>Everything. Specifically:</p>
+  <ul>
+    <li><strong>Items, events, reminders, tags and notes</strong> — everything you enter.</li>
+    <li><strong>Attachments</strong> — the photos and PDFs you add, including scans made with the camera.</li>
+    <li><strong>Preferences</strong> — notification settings, default reminder time, Timeline filters.</li>
+  </ul>
+  <p>All of it lives in the app's own storage on your iPhone or iPad and is included in your normal device backups. Deleting the app deletes all of it, and nothing is copied anywhere first.</p>
+
+  <h2>What leaves your device, and only when you ask</h2>
+  <p>The share sheet. Exports — a CSV of events, a Service History PDF, or a full ZIP backup — are created only when you ask for them and handed to the iOS share sheet. Where they go from there is entirely your choice, because the app has no idea what the share sheet does with them. A backup contains everything the app holds, including your attachments, and the screen you share from says so.</p>
+
+  <h2>Camera, photos and notifications</h2>
+  <ul>
+    <li><strong>Camera</strong> — used only when you choose to scan a document. The scan is saved into the app; nothing leaves the device.</li>
+    <li><strong>Photo library</strong> — through the system photo picker. The app sees only the photos you pick and has no access to the rest of your library.</li>
+    <li><strong>Notifications</strong> — reminders are scheduled locally on the device. No push server is involved.</li>
+  </ul>
+
+  <h2>iCloud</h2>
+  <p>This version does not sync to iCloud. If a future version adds it, your data will be stored in your own private iCloud database under Apple's terms, and this policy will be updated before that ships.</p>
+
+  <h2>Children</h2>
+  <p>There is nothing here directed at children and nothing collected from anyone.</p>
+
+  <h2>Contact</h2>
+  <p>Questions, or something in this document that turns out not to be true: <a href="mailto:apps@mikerags.com">apps@mikerags.com</a>.</p>
+
+  <footer><a href="../">All policies</a></footer>
+</main>
+</body>
+</html>
