@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy — SimpleHT</title>
+<title>SimpleHT privacy policy</title>
 <style>
   :root{color-scheme:light dark;--bg:#fff;--fg:#1d1d1f;--muted:#6e6e73;--rule:#e5e5ea;--link:#0066cc}
   @media (prefers-color-scheme:dark){:root{--bg:#000;--fg:#f5f5f7;--muted:#a1a1a6;--rule:#3a3a3c;--link:#2997ff}}
@@ -17,48 +17,49 @@
   ul{padding-left:1.25rem}
   code{font:.92em ui-monospace,SFMono-Regular,Menlo,monospace}
   footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.92rem}
+  .card{border:1px solid var(--rule);border-radius:12px;padding:1rem 1.1rem;margin:1rem 0}
+  .card p{margin:.3rem 0}
 </style>
 </head>
 <body>
 <main>
-  <h1>Privacy — SimpleHT</h1>
-  <p class="meta">Last updated 20 September 2026.</p>
+  <h1>SimpleHT privacy policy</h1>
+  <p class="meta">Last updated 26 September 2026.</p>
 
-  <p>SimpleHT programs a TIDRADIO TD-H3 handheld radio from an iPhone or iPad.</p>
+  <p>SimpleHT is a free app for programming the TIDRADIO TD-H3 handheld radio from an iPhone or iPad.</p>
 
-  <p><strong>It collects nothing, and it cannot: the app makes no network requests at all.</strong> There is no account, no analytics, no advertising identifier, no crash-reporting service and no third-party SDK of any kind. <code>URLSession</code> does not appear anywhere in the source. The only thing it talks to is a radio, over Bluetooth, and the whole of that conversation is the eight kilobytes of memory the radio holds.</p>
+  <p><strong>The short version: SimpleHT collects nothing.</strong> The app never connects to the internet. There is no account, no analytics, no ads, no advertising identifier, no crash reporting and no third-party code of any kind. The only thing it talks to is your radio, over Bluetooth.</p>
 
-  <p>That claim is checkable rather than asserted: the app ships an Apple privacy manifest (<code>PrivacyInfo.xcprivacy</code>) declaring no data collection and no tracking, and the source is available on request. The repository is private today because it contains dumps of the author's own radio; if that changes, it will be linked here.</p>
-
-  <p>This text is also <strong>inside the app</strong>, under <em>About and privacy</em> on the home page, so it is readable without a network and without this page being reachable.</p>
+  <p>The app includes an Apple privacy manifest that says the same thing: no data collected, no tracking. You can also read this policy inside the app, under <em>About and privacy</em> on the home screen, even with no signal.</p>
 
   <h2>What stays on your device</h2>
-  <p>Everything. Specifically:</p>
+  <p>Everything you create stays in the app's own storage on your device:</p>
   <ul>
-    <li><strong>Configurations</strong> — the channel line-ups you save, and the recoverable copy of whatever you are working on.</li>
-    <li><strong>Channel Sets</strong> — the groups of channels you build and reuse.</li>
-    <li><strong>Backups</strong> — a copy of a radio's memory taken before every write, so a half-written radio has something to go back to, plus the journal that records what was sent.</li>
-    <li><strong>Radio nicknames</strong> — a name you give a handset so two of them can be told apart. It never leaves the phone and is never included in a shared file.</li>
+    <li><strong>Configurations:</strong> the channel line-ups you save, plus a copy of whatever you're working on so it isn't lost.</li>
+    <li><strong>Channel sets:</strong> groups of channels you build and reuse.</li>
+    <li><strong>Backups:</strong> a copy of your radio's memory taken before every write, so there's always a way back, plus a record of what was sent.</li>
+    <li><strong>Radio nicknames:</strong> a name you give a radio so you can tell two apart. It never leaves your device.</li>
   </ul>
-  <p>All of it lives in the app's own storage. Deleting the app deletes all of it, and nothing is copied anywhere first.</p>
+  <p>Deleting the app deletes all of it. Nothing is copied anywhere else first.</p>
 
-  <h2>What leaves your device, and only when you ask</h2>
-  <p>The share sheet. You can share one configuration, one Channel Set, or one backup at a time, as a file, to whoever you choose — and where it goes is entirely your choice, because the app has no idea what the share sheet does with it. A shared backup is two files: the radio image, byte for byte, and a sidecar describing when and how it was taken — with the identifier and the name you gave the radio withheld, which the sidecar says rather than leaving blank. The image carries whatever the radio held, including the channel names you programmed, and the screen you share from says so.</p>
-
-  <p><strong>A shared file carries no Bluetooth identifier and no nickname.</strong> A configuration read from a radio records which radio it came from so the app can suggest that radio as the target later; that identifier is stripped before the file is written. The test that proves it checks the encoded bytes rather than the object, so a field added in a later version cannot quietly start carrying it.</p>
-
-  <p>A shared file contains the channels — frequencies, names, tones, power, bandwidth — the mode the configuration was made for, and the radio model. That is all.</p>
+  <h2>What leaves your device (only when you ask)</h2>
+  <p>You can share a configuration, a channel set or a backup as a file using the standard share sheet. Where it goes is completely up to you.</p>
+  <ul>
+    <li>A shared configuration contains the channels (frequencies, names, tones, power and bandwidth), the mode it was made for, and the radio model. That's all.</li>
+    <li>A shared backup is an exact copy of the radio's memory, including the channel names you programmed, along with a note of when it was taken.</li>
+    <li>Shared files never include your radio's Bluetooth identifier or any nickname you gave it.</li>
+  </ul>
 
   <h2>Bluetooth</h2>
-  <p>The app asks for Bluetooth because it is the only way to reach the radio. It scans for TD-H3 handsets, reads the one you tap, and writes to the one you choose. It does not use Bluetooth for anything else, has no background mode, and stops scanning when you leave the screen.</p>
+  <p>SimpleHT asks for Bluetooth because that's the only way to reach the radio. It looks for nearby TD-H3 radios, reads the one you tap, and writes to the one you choose. It doesn't use Bluetooth for anything else, doesn't run in the background, and stops looking when you leave the screen.</p>
 
   <h2>Children</h2>
-  <p>There is nothing here directed at children and nothing collected from anyone.</p>
+  <p>Nothing in SimpleHT is aimed at children, and nothing is collected from anyone.</p>
 
-  <h2>Contact</h2>
-  <p>Questions, or something in this document that turns out not to be true: <a href="mailto:apps@mikerags.com">apps@mikerags.com</a>.</p>
+  <h2>Questions</h2>
+  <p>If you have a question, or spot something here that isn't right, email <a href="mailto:apps@mikerags.com">apps@mikerags.com</a>.</p>
 
-  <footer><a href="../">All policies</a></footer>
+  <footer><a href="support/">SimpleHT support</a> · <a href="../">All policies</a></footer>
 </main>
 </body>
 </html>

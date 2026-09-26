@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SimpleHT support</title>
+<style>
+  :root{color-scheme:light dark;--bg:#fff;--fg:#1d1d1f;--muted:#6e6e73;--rule:#e5e5ea;--link:#0066cc}
+  @media (prefers-color-scheme:dark){:root{--bg:#000;--fg:#f5f5f7;--muted:#a1a1a6;--rule:#3a3a3c;--link:#2997ff}}
+  body{margin:0;padding:2.5rem 1.25rem 4rem;background:var(--bg);color:var(--fg);font:17px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif}
+  main{max-width:42rem;margin:0 auto}
+  h1{font-size:2rem;line-height:1.15;margin:0 0 .25rem}
+  h2{font-size:1.25rem;margin:2rem 0 .5rem}
+  p,li{margin:.6rem 0}
+  .meta{color:var(--muted);margin-bottom:1.5rem}
+  a{color:var(--link)}
+  ul{padding-left:1.25rem}
+  code{font:.92em ui-monospace,SFMono-Regular,Menlo,monospace}
+  footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.92rem}
+  .card{border:1px solid var(--rule);border-radius:12px;padding:1rem 1.1rem;margin:1rem 0}
+  .card p{margin:.3rem 0}
+</style>
+</head>
+<body>
+<main>
+  <h1>SimpleHT support</h1>
+  <p class="meta">Help, feedback and ideas for SimpleHT, the free TD-H3 programming app.</p>
+
+  <p>Thanks for trying SimpleHT! I built it because the official app frustrated me, and I wanted something simpler. If something isn't working, is confusing, or could just be better, I'd really like to hear about it.</p>
+
+  <div class="card">
+    <p><strong>Email:</strong> <a href="mailto:apps@mikerags.com?subject=SimpleHT">apps@mikerags.com</a></p>
+    <p>Bug reports, questions, feature ideas and "this bit confused me" are all welcome.</p>
+  </div>
+
+  <h2>Getting started</h2>
+  <ol>
+    <li>Turn on your TD-H3 and switch on its Bluetooth by holding down the blue button.</li>
+    <li>Keep the radio close to your phone or iPad and open SimpleHT. The radio shows up under <em>Nearby TD-H3 radios</em>.</li>
+    <li>Tap <strong>Read configuration</strong> to bring its channels into the app, or start from one of the built-in starting configurations.</li>
+    <li>Make your changes, then tap <strong>Program a radio</strong>. You'll see exactly what will change before anything is sent.</li>
+  </ol>
+
+  <h2>Common questions</h2>
+  <p><strong>My radio doesn't show up.</strong> Make sure the radio's Bluetooth is on (hold the blue button), that it's within a few feet, and that SimpleHT is allowed to use Bluetooth in the Settings app. If another phone or the official app is connected to the radio, disconnect that first, then tap the refresh button.</p>
+  <p><strong>Can I edit without the radio nearby?</strong> Yes. Configurations live in the app, so you can build and edit them anywhere and program a radio later.</p>
+  <p><strong>What if programming gets interrupted?</strong> SimpleHT backs up your radio before every write and checks every block afterward. If something stops partway, open <em>Backups and recovery</em> on the home screen and the app will walk you through it.</p>
+  <p><strong>Can I use my CHIRP files?</strong> Yes. You can bring in channels from a CHIRP .csv or .img file.</p>
+  <p><strong>Which radios does it work with?</strong> The TIDRADIO TD-H3. SimpleHT is an independent app and isn't made by or affiliated with TIDRADIO.</p>
+
+  <h2>Privacy</h2>
+  <p>SimpleHT collects nothing and never connects to the internet. Read the full <a href="../">privacy policy</a>.</p>
+
+  <footer><a href="../">SimpleHT privacy policy</a> · <a href="../../">All policies</a></footer>
+</main>
+</body>
+</html>
